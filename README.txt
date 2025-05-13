@@ -1,3 +1,5 @@
+Updated Aap's rwio plugin for 3ds Max 2026.
+
 RWio for 3ds max
 ================
 
