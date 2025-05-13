@@ -1,3 +1,4 @@
+#define NOMINMAX
 #include "dffimp.h"
 
 HINSTANCE hInstance;

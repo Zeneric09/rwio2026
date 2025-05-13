@@ -1,3 +1,4 @@
+#define NOMINMAX
 #include "dffimp.h"
 
 const char *getAsciiStr(const TCHAR *str);

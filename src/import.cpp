@@ -1,3 +1,4 @@
+#define NOMINMAX
 #include "dffimp.h"
 
 int DFFImport::convertHierarchy = 1;
@@ -1168,7 +1169,7 @@ DFFImport::dffFileRead(const TCHAR *filename)
 #endif
 
 		if(flipz){
-			AngAxis aa(Point3(0,1,0), pi);
+			AngAxis aa(Point3(0, 1, 0), static_cast<float>(pi));
 			node->Rotate(t, tm, aa);	// ImpNode crash
 		}
 	}
@@ -1206,13 +1207,13 @@ DFFImport::dffFileRead(const TCHAR *filename)
 
 	// Convert RW to Max world space.
 	// Rotate Bipeds too because it looks nicer.
-	if(this->convertHierarchy &&
-	   (this->isWorldSpace || this->isBiped)){
-		AngAxis aa(Point3(1,0,0), -pi/2);
+	if (this->convertHierarchy &&
+		(this->isWorldSpace || this->isBiped)) {
+		AngAxis aa(Point3(1, 0, 0), float(-pi / 2));
 		::Matrix3 tm;
 		tm.IdentityMatrix();
 		rootnode->Rotate(t, tm, aa);		// ImpNode crash
-		for(int i = 0; i < numSkinned; i++)
+		for (int i = 0; i < numSkinned; i++)
 			skinInfo[i].node->Rotate(t, tm, aa);	// ImpNode crash
 	}
 	// Remember whether this was a biped for exporting

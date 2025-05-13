@@ -1,3 +1,4 @@
+#define NOMINMAX
 #include "dffimp.h"
 
 rw::Matrix::Tolerance exportTolerance = { 0.001f, 0.001f, 0.001f };

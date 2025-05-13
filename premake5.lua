@@ -1,5 +1,5 @@
-Librw = os.getenv("LIBRW")
-Librwgta = os.getenv("LIBRWGTA")
+Librw = "D:/f32f/librw-master"
+Librwgta = "D:/f32f/librwgta-master"
 
 workspace "rwio"
 	configurations { "Release", "Debug" }
@@ -75,58 +75,6 @@ function maxplugin2(maxsdk)
 	filter {}
 end
 
-project "rwio2009"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2009 SDK/maxsdk/"
-	maxplugin1(maxsdk)
-
-project "rwio2010"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2010 SDK/maxsdk/"
-	maxplugin1(maxsdk)
-
-project "rwio2012"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2012/maxsdk/"
-	maxplugin1(maxsdk)
-	filter { "platforms:amd64" }
-		debugdir "E:/Program Files/Autodesk/3ds Max 2012"
-		debugcommand "E:/Program Files/Autodesk/3ds Max 2012/3dsmax.exe"
-		postbuildcommands "copy /y \"$(TargetPath)\" \"E:\\Program Files\\Autodesk\\3ds Max 2012\\plugins\\\""
-
-project "rwio2014"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2014 SDK/maxsdk/"
-	maxplugin2(maxsdk)
-
-project "rwio2015"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2015 SDK/maxsdk/"
-	maxplugin2(maxsdk)
-
-project "rwio2017"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2017 SDK/maxsdk/"
-	maxplugin2(maxsdk)
-
-project "rwio2018"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2018 SDK/maxsdk/"
-	maxplugin2(maxsdk)
-
-project "rwio2020"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2020 SDK/maxsdk/"
-	maxplugin2(maxsdk)
-
-project "rwio2021"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2021 SDK/maxsdk/"
-	maxplugin2(maxsdk)
-
-project "rwio2022"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2022 SDK/maxsdk/"
-	maxplugin2(maxsdk)
-
-project "rwio2023"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2023 SDK/maxsdk/"
-	maxplugin2(maxsdk)
-
-project "rwio2024"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2024 SDK/maxsdk/"
-	maxplugin2(maxsdk)
-
-project "rwio2025"
-	maxsdk = "C:/Users/aap/src/maxsdk/3ds Max 2025 SDK/maxsdk/"
+project "rwio2026"
+	maxsdk = "C:/Program Files/Autodesk/3ds Max 2026 SDK/maxsdk"
 	maxplugin2(maxsdk)
